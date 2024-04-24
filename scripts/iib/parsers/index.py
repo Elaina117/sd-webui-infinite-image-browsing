@@ -1,5 +1,5 @@
 from scripts.iib.parsers.comfyui import ComfyUIParser
-from scripts.iib.parsers.sd_webui import SdWebUIParser
+from scripts.iib.parsers.sd_wui import SdWebUIParser
 from scripts.iib.parsers.fooocus import FooocusParser
 from scripts.iib.parsers.model import ImageGenerationInfo
 from scripts.iib.logger import logger

@@ -39,7 +39,7 @@ const gridView = insertTabPane({
   tabIdx: 0,
   paneIdx: 0,
   pane: {
-    type: 'grid-view', // Other types are also available, see https://github.com/zanllp/sd-webui-infinite-image-browsing/tree/main/vue/src/store/useGlobalStore.ts#L15
+    type: 'grid-view', // Other types are also available, see https://github.com/zanllp/sd-wui-infinite-image-browsing/tree/main/vue/src/store/useGlobalStore.ts#L15
     name: 'Grid View 1',
     removable: true, // Optional parameter to allow the files to be removed, default is false.
     allowDragAndDrop: true, // Optional parameter to allow drag and drop, default is false.
@@ -69,4 +69,4 @@ const localDirPane = insertTabPane({
 localDirPane.ref.close() // Closes the newly created tab pane
 ```
 
-To learn more information, you can refer to the type definition in the following file: https://github.com/zanllp/sd-webui-infinite-image-browsing/tree/main/vue/src/store/useGlobalStore.ts#L15 and this file: [define](./src//defineExportFunc.ts).
+To learn more information, you can refer to the type definition in the following file: https://github.com/zanllp/sd-wui-infinite-image-browsing/tree/main/vue/src/store/useGlobalStore.ts#L15 and this file: [define](./src//defineExportFunc.ts).

@@ -19,7 +19,7 @@ Promise.resolve().then(async () => {
 
   <body>
     <div id="zanllp_dev_gradio_fe">
-      It seems to have failed to load. You can try refreshing the page. <br> If that doesn't work, click on <a href="https://github.com/zanllp/sd-webui-infinite-image-browsing/issues/90" target="_blank" >FAQ</a> for help</div>
+      It seems to have failed to load. You can try refreshing the page. <br> If that doesn't work, click on <a href="https://github.com/zanllp/sd-wui-infinite-image-browsing/issues/90" target="_blank" >FAQ</a> for help</div>
     </div>
     
   </body>

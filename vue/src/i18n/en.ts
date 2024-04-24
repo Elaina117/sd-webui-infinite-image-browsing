@@ -65,8 +65,8 @@ export const en: IIBI18nMap = {
   initiateSoftwareStartupConfig: 'Initiate software startup configuration',
   'tauriLaunchConf.readSdWebuiConfigTitle': 'Read Stable Diffusion Webui Config',
   'tauriLaunchConf.readSdWebuiConfigDescription':
-    'If you have installed sd-webui and this extension, it is recommended to use this option to directly read the configuration and share data.',
-  'tauriLaunchConf.selectSdWebuiFolder': 'Click to select the SD-webui folder',
+    'If you have installed sd-wui and this extension, it is recommended to use this option to directly read the configuration and share data.',
+  'tauriLaunchConf.selectSdWebuiFolder': 'Click to select the SD-wui folder',
   'tauriLaunchConf.skipThisConfigTitle': 'Skip This Configuration',
   'tauriLaunchConf.skipThisConfigDescription':
     'All features will still be available and you can reset them in the settings page.',

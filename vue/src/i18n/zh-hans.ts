@@ -171,8 +171,8 @@ export const zhHans = {
   selectAll: '全选',
   'tauriLaunchConf.readSdWebuiConfigTitle': '读取Stable Diffusion Webui的配置',
   'tauriLaunchConf.readSdWebuiConfigDescription':
-    '如果你已经安装sd-webui，且在sd-webui内安装了本拓展，推荐直接使用这个，将直接读取配置并且数据共享',
-  'tauriLaunchConf.selectSdWebuiFolder': '点击选择SD-webui的文件夹',
+    '如果你已经安装sd-wui，且在sd-wui内安装了本拓展，推荐直接使用这个，将直接读取配置并且数据共享',
+  'tauriLaunchConf.selectSdWebuiFolder': '点击选择SD-wui的文件夹',
   'tauriLaunchConf.skipThisConfigTitle': '跳过本次配置',
   'tauriLaunchConf.skipThisConfigDescription': '所有功能仍将可用，你可以在设置页重置',
   'tauriLaunchConf.skipButton': '跳过',

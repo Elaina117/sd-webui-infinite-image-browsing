@@ -8,7 +8,7 @@ import { t } from './i18n'
 import { invoke } from '@tauri-apps/api/tauri'
 export const appConfFilename = 'app.conf.json'
 interface TauriAppLaunchConf {
-  sdwebui_dir: string
+  sdwui_dir: string
 }
 const conf = ref<TauriAppLaunchConf>()
 const save = () => {
@@ -24,10 +24,10 @@ const TauriLaunchConfModal = defineComponent({
         if (!(await fs.exists(`${dir}/config.json`))) {
           return message.error(t('tauriLaunchConfMessages.configNotFound'))
         }
-        if (!(await fs.exists(`${dir}/extensions/sd-webui-infinite-image-browsing`))) {
+        if (!(await fs.exists(`${dir}/extensions/sd-wui-infinite-image-browsing`))) {
           return message.error(t('tauriLaunchConfMessages.folderNotFound'))
         }
-        conf.value!.sdwebui_dir = dir
+        conf.value!.sdwui_dir = dir
         message.info(t('tauriLaunchConfMessages.configCompletedMessage'))
         await save()
         await invoke('shutdown_api_server_command')
@@ -65,7 +65,7 @@ export const openModal = async () => {
   } catch (error) { /* empty */ }
   if (!conf.value) {
     conf.value = {
-      sdwebui_dir: ''
+      sdwui_dir: ''
     }
     await save()
     Modal.info({

@@ -240,7 +240,7 @@ export const useGlobalStore = defineStore(
     const computedTheme = computed(() =>  {
       const getParDark = () => {
         try {
-          return parent.location.search.includes('theme=dark') // sd-webui的
+          return parent.location.search.includes('theme=dark') // sd-wui的
         } catch (error) {
           return false
         }

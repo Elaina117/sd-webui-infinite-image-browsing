@@ -32,7 +32,7 @@ fn get_tauri_conf(state: tauri::State<'_, AppState>) -> AppConf {
 
 #[derive(Deserialize, Default, Debug)]
 struct Config {
-    sdwebui_dir: String,
+    sdwui_dir: String,
 }
 
 fn read_config_file(path: &str) -> Result<String, Error> {
@@ -63,9 +63,9 @@ fn main() {
     let mut args = vec!["--port", &port_str, "--allow_cors", "--enable_shutdown"];
     let contents = read_config_file("app.conf.json").unwrap_or_default();
     let conf = serde_json::from_str::<Config>(&contents).unwrap_or_default();
-    if !conf.sdwebui_dir.is_empty() {
-        args.push("--sd_webui_dir");
-        args.push(&conf.sdwebui_dir);
+    if !conf.sdwui_dir.is_empty() {
+        args.push("--sd_wui_dir");
+        args.push(&conf.sdwui_dir);
     }
     let (mut rx, _child) = Command::new_sidecar("iib_api_server")
         .expect("failed to create `iib_api_server` binary command")

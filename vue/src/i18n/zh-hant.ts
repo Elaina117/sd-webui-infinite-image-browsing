@@ -175,8 +175,8 @@ export const zhHant: Partial<IIBI18nMap> = {
   selectAll: '全選',
   'tauriLaunchConf.readSdWebuiConfigTitle': '讀取Stable Diffusion Webui的配置',
   'tauriLaunchConf.readSdWebuiConfigDescription':
-    '如果你已經安裝sd-webui,且在sd-webui內安裝了本拓展,推薦直接使用這個,將直接讀取配置並且數據共享',
-  'tauriLaunchConf.selectSdWebuiFolder': '點擊選擇SD-webui的文件夾',
+    '如果你已經安裝sd-wui,且在sd-wui內安裝了本拓展,推薦直接使用這個,將直接讀取配置並且數據共享',
+  'tauriLaunchConf.selectSdWebuiFolder': '點擊選擇SD-wui的文件夾',
   'tauriLaunchConf.skipThisConfigTitle': '跳過本次配置',
   'tauriLaunchConf.skipThisConfigDescription': '所有功能仍將可用,你可以在設置頁重置',
   'tauriLaunchConf.skipButton': '跳過',

@@ -3,10 +3,10 @@ from PIL import Image
 from scripts.iib.tool import (
     comfyui_exif_data_to_str,
     is_img_created_by_comfyui,
-    is_img_created_by_comfyui_with_webui_gen_info,
+    is_img_created_by_comfyui_with_wui_gen_info,
     get_comfyui_exif_data,
     parse_generation_parameters,
-    read_sd_webui_gen_info_from_image,
+    read_sd_wui_gen_info_from_image,
 )
 from scripts.iib.parsers.model import ImageGenerationInfo, ImageGenerationParams
 from scripts.iib.logger import logger
@@ -23,8 +23,8 @@ class ComfyUIParser:
         if not clz.test(img, file_path):
             raise Exception("The input image does not match the current parser.")
         try:
-            if is_img_created_by_comfyui_with_webui_gen_info(img):
-                info = read_sd_webui_gen_info_from_image(img, file_path)
+            if is_img_created_by_comfyui_with_wui_gen_info(img):
+                info = read_sd_wui_gen_info_from_image(img, file_path)
                 info += ", Source Identifier: ComfyUI"
                 params = parse_generation_parameters(info)
             else:
@@ -46,6 +46,6 @@ class ComfyUIParser:
         try:
             return is_img_created_by_comfyui(
                 img
-            ) or is_img_created_by_comfyui_with_webui_gen_info(img)
+            ) or is_img_created_by_comfyui_with_wui_gen_info(img)
         except Exception:
             return False

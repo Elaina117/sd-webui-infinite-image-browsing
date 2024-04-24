@@ -106,13 +106,13 @@ const restoreRecord = () => {
       </div>
       <div flex-placeholder />
 
-      <a href="https://github.com/zanllp/sd-webui-infinite-image-browsing" target="_blank"
+      <a href="https://github.com/zanllp/sd-wui-infinite-image-browsing" target="_blank"
         class="last-record">Github</a>
-      <a href="https://github.com/zanllp/sd-webui-infinite-image-browsing/blob/main/.env.example" target="_blank"
+      <a href="https://github.com/zanllp/sd-wui-infinite-image-browsing/blob/main/.env.example" target="_blank"
         class="last-record">{{ $t('privacyAndSecurity') }}</a>
-      <a href="https://github.com/zanllp/sd-webui-infinite-image-browsing/wiki/Change-log" target="_blank"
+      <a href="https://github.com/zanllp/sd-wui-infinite-image-browsing/wiki/Change-log" target="_blank"
         class="last-record">{{ $t('changlog') }}</a>
-      <a href="https://github.com/zanllp/sd-webui-infinite-image-browsing/issues/90" target="_blank"
+      <a href="https://github.com/zanllp/sd-wui-infinite-image-browsing/issues/90" target="_blank"
         class="last-record">{{ $t('faq') }}</a>
       <a-radio-group v-model:value="global.darkModeControl" button-style="solid">
         <a-radio-button value="light">light</a-radio-button>

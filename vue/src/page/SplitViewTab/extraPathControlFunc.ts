@@ -35,7 +35,7 @@ export const addToExtraPath = async (type: ExtraPathType) => {
                 display: 'block'
               },
               target: '_blank',
-              href: 'https://github.com/zanllp/sd-webui-infinite-image-browsing/issues/518'
+              href: 'https://github.com/zanllp/sd-wui-infinite-image-browsing/issues/518'
             }, 'Please open this link first (Access Control mode only)') : '',
             h(Input, {
               value: key.value,

@@ -71,7 +71,7 @@ def backup_db_file(db_file_path):
             
     print(f"\033[92mIIB Database file has been successfully backed up to the backup folder.\033[0m")
 
-def get_sd_webui_conf(**kwargs):
+def get_sd_wui_conf(**kwargs):
     try:
         from modules.shared import opts
 
@@ -79,10 +79,10 @@ def get_sd_webui_conf(**kwargs):
     except:
         pass
     try:
-        sd_conf_path = kwargs.get("sd_webui_config")
+        sd_conf_path = kwargs.get("sd_wui_config")
         with codecs.open(sd_conf_path, "r", "utf-8") as f:
             obj = json.loads(f.read())
-            if kwargs.get("sd_webui_path_relative_to_config"):
+            if kwargs.get("sd_wui_path_relative_to_config"):
                 for dir in sd_img_dirs:
                     if obj[dir] and not os.path.isabs(obj[dir]):
                         obj[dir] = os.path.normpath(
@@ -355,7 +355,7 @@ def get_img_geninfo_txt_path(path: str):
 def is_img_created_by_comfyui(img: Image):
     return img.info.get('prompt') and img.info.get('workflow')
 
-def is_img_created_by_comfyui_with_webui_gen_info(img: Image):
+def is_img_created_by_comfyui_with_wui_gen_info(img: Image):
     return is_img_created_by_comfyui(img) and img.info.get('parameters')
 
 def get_comfyui_exif_data(img: Image):
@@ -402,7 +402,7 @@ def comfyui_exif_data_to_str(data):
         meta_arr.append(f'{k}: {v}')
     return res + ", ".join(meta_arr)
 
-def read_sd_webui_gen_info_from_image(image: Image, path="") -> str:
+def read_sd_wui_gen_info_from_image(image: Image, path="") -> str:
     """
     Reads metadata from an image file.
 

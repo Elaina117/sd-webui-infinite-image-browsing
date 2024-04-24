@@ -15,7 +15,7 @@ from scripts.iib.tool import (
     locale,
     enable_access_control,
     get_windows_drives,
-    get_sd_webui_conf,
+    get_sd_wui_conf,
     get_valid_img_dirs,
     open_folder,
     get_img_geninfo_txt_path,
@@ -149,7 +149,7 @@ def infinite_image_browsing_api(app: FastAPI, **kwargs):
 
     def get_img_search_dirs():
         try:
-            return get_valid_img_dirs(get_sd_webui_conf(**kwargs))
+            return get_valid_img_dirs(get_sd_wui_conf(**kwargs))
         except Exception as e:
             print(e)
             return []
@@ -157,7 +157,7 @@ def infinite_image_browsing_api(app: FastAPI, **kwargs):
     def update_all_scanned_paths():
         allowed_paths = os.getenv("IIB_ACCESS_CONTROL_ALLOWED_PATHS")
         if allowed_paths:
-            sd_webui_conf = get_sd_webui_conf(**kwargs)
+            sd_wui_conf = get_sd_wui_conf(**kwargs)
             path_config_key_map = {
                 "save": "outdir_save",
                 "extra": "outdir_extras_samples",
@@ -168,7 +168,7 @@ def infinite_image_browsing_api(app: FastAPI, **kwargs):
             def path_map(path: str):
                 path = path.strip()
                 if path in path_config_key_map:
-                    return sd_webui_conf.get(path_config_key_map.get(path))
+                    return sd_wui_conf.get(path_config_key_map.get(path))
                 return path
 
             paths = normalize_paths(
@@ -264,7 +264,7 @@ def infinite_image_browsing_api(app: FastAPI, **kwargs):
         except Exception as e:
             print(e)
         return {
-            "global_setting": get_sd_webui_conf(**kwargs),
+            "global_setting": get_sd_wui_conf(**kwargs),
             "cwd": cwd,
             "is_win": is_win,
             "home": os.environ.get("USERPROFILE") if is_win else os.environ.get("HOME"),

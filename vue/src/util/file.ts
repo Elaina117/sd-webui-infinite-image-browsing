@@ -62,7 +62,7 @@ export function downloadFiles (urls: string[]) {
   document.body.appendChild(link)
 
   urls.forEach((url) => {
-    const urlObject = new URL(url, 'https://github.com/zanllp/sd-webui-infinite-image-browsing')
+    const urlObject = new URL(url, 'https://github.com/zanllp/sd-wui-infinite-image-browsing')
     let filename = ''
     const disposition = urlObject.searchParams.get('disposition')
     if (disposition) {
